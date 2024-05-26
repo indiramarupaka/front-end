@@ -1,13 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+
+function Home() {
   return (
     <div className="App">
       <header className="App-header">
         
         <p>
           <h1>Front end</h1>
+          <h1>Applicaation</h1>
          
         </p>
         
@@ -16,4 +16,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
