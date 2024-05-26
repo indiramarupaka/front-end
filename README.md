@@ -68,3 +68,26 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+###############################################################################################################################
+
+git commands:
+
+git init
+git add .
+git commit -m""
+git remote add origin REMOTE-URL
+git push origin master
+--------------------------
+Docker frontend file:
+
+FROM node:alpine
+
+WORKDIR /app
+COPY package.json . 
+
+RUN npm install
+-----------------------
+
+1. docker build -t front-end .
+2. docker images -a
+3. docker run 
