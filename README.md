@@ -90,4 +90,4 @@ RUN npm install
 
 1. docker build -t front-end .
 2. docker images -a
-3. docker run 
+3. docker run -p 3000:3000 front-end
