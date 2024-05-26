@@ -1,5 +1,6 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Home from './components/Home';
 
 function App() {
   return (
@@ -8,7 +9,8 @@ function App() {
         
         <p>
           <h1>Front end</h1>
-         
+          <h1>Applicaation</h1>
+         <Home />
         </p>
         
       </header>
