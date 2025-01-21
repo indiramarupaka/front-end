@@ -1,0 +1,56 @@
+pipeline {
+    agent any
+
+    environment {
+        // Define any environment variables here
+        NODE_HOME = tool 'NodeJS' // Assuming you have NodeJS installed in Jenkins
+        PATH = "${NODE_HOME}/bin:${env.PATH}"
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the code from the repository
+                git url: 'https://github.com/indiramarupaka/front-end.git', branch: 'master'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                // Install npm dependencies
+                sh 'npm install'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                // Build the React application
+                sh 'npm run build'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                // Run tests
+                sh 'npm test'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                // Deploy the application (this can vary based on your deployment strategy)
+                echo 'Deploying the application...'
+                // Add your deployment commands here
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed!'
+        }
+    }
+}
