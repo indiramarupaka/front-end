@@ -1,1 +1,6 @@
 https://www.youtube.com/watch?v=x5W5oDzqND0&list=PL2OrQJM8zmZ2-O_rM2Ju9zYMbY8Ta-8I4&index=44
+
+
+Need to run :terminalcmd
+docker build -t front-end:dev .
+                                  
